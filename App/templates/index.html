@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>BiodiViz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <div class="contact-clean">
+      <h2 class="text-center">BiodiViz</h2>
+      <div class="container">
+        <form action="/graph" method="POST">
+          <input type="hidden" name="button_type" value="initial">
+          <textarea class="form-control" rows="20" name="input" placeholder="Input text here."></textarea>
+          <input class="btn btn-primary" type="submit" value="Submit" placeholder="Submit">
+        </form>
+      </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
