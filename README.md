@@ -29,7 +29,7 @@ To run the Jupyter Notebooks yourself:
 
 The *App* folder contains the files for running the BiodiViz application. The files for the web application are under the *static* and *templates* folders. The former folder contains the CSS code and images used for the application, while the latter contains the HTML files. The file for the Python Flask server is *app.py*.
 
-If you wish to run the application, you must follow the proceeding steps:
+If you wish to run the application, you must follow the proceeding steps. Note that the instructions are tailored to a Windows 10 operating system. Other operating systems should follow a similar process but may be slightly different.
 
 ### 1. Cloning this Github repository
 
@@ -54,10 +54,44 @@ You may delete the Finetuning and Datasets folders from the repository since the
 
 ### 2. Downloading the NER & RE Models
 
-Since the Named Entity Recognition (NER) and Relation Extraction (RE) Models are too big to be included in the Github repository, you may download them from the pre-release attachments instead: [https://github.com/shannentan22/BiodiViz/releases/tag/v1.0.0](https://github.com/shannentan22/BiodiViz/releases/tag/v1.0.0).
+Since the Named Entity Recognition (NER) and Relation Extraction (RE) Models are too big to be included in the Github repository, you may download them from the pre-release attachments instead: https://github.com/shannentan22/BiodiViz/releases/tag/v1.0.0.
 The files are named `ner_model.zip` and `re_model.zip`.
 
 Before downloading, please ensure that you have enough space to accommodate the models since each file is fairly large at about 760+ MB. The download process may also take a few minutes due to the files' sizes. After downloading the files, unzip them, and move the unzipped folders under the App folder of the cloned repository. 
+
+### 3. Installing the Requirements
+
+The following set of instructions need only be performed once for the installation of requirements:
+
+1. Install Python 3.12.1 by downloading the appropriate version from this link: https://www.python.org/downloads/release/python-3121/.
+2. Open Command Prompt.
+3. Change directory to the App folder of the BiodiViz repository.
+4. Create a virtual environment: Enter \texttt{python -m venv venv} in Command Prompt.
+5. Activate the virtual environment: Enter `venv\textbackslash Scripts\textbackslash activate.bat` in Command Prompt.
+6. Ensure that PIP is installed. If not, visit the PIP website for installation instructions https://pip.pypa.io/en/stable/installation/.
+7. Install the packages. Enter `pip install -r requirements.txt` in Command Prompt. This may take a few minutes.
+8. You now have all the requirements needed for running the server and application.
+
+### 4. Running the Server
+
+Every time you wish to run the application, the following set of steps must be done:
+
+1. Open Command Prompt
+2. Change directory to the App folder of the BiodiViz repository.
+3. Activate the virtual environment: Enter `venv\textbackslash Scripts\textbackslash activate.bat` in Command Prompt.
+4. Run the server: Enter `flask run --port=8080` in Command Prompt.
+5. Enter the link http://127.0.0.1:8080/ into any browser's address bar. You now have access to the BiodiViz application.
+
+### 5. Using the Application
+
+1. Once you have access to the main page of BiodiViz in your browser, you may input any biodiversity-related text into the text box. Note that longer inputs may also take longer to process. Click `Submit` to generate the knowledge graph.
+2. Once completed, you will be redirected to the graph page displaying the knowledge graph.
+3. At the top of the graph page, there are filtering options. Choose specific entity categories and relation types you would want to be included in the graph. After clicking \texttt{Apply filter}, the intersection of the entity categories and relation types will be displayed in a new knowledge graph.
+4. You can also zoom or pan the graph to navigate it better:
+    - Scroll up to zoom in.
+    - Scroll down to zoom out.
+    - Drag the graph to pan.
+5. To run the application for other input texts, simply go back to the main page and repeat the instructions from this section.
 
 ## References
 
