@@ -13,6 +13,21 @@ Two datasets were used for this research, both of which were taken from the [Bio
 
 A copy of these corpora is also in our repository, under the *Datasets* folder. Each dataset contains three CSV files for the development/validation, train, and test sets, each of which serve a different purpose in the training process.
 
+## NER and RE Finetuning
+
+The source codes for the NER and RE training can be found under the *Finetuning* folder. In each notebook, there are sections for package installation, data preprocessing, model fine-tuning, model inference, and model evaluation. For the RE notebooks, there is an additional hyperparameter optimization section.
+
+To run the Jupyter Notebooks yourself:
+1. Ensure that you have Python 3.12.1 installed in your system.
+2. Optionally, you may create a virtual environment before installing the packages.
+3. Select the Python file of the model you want to run and open it in your chosen text editor or integrated development environment (IDE).
+4. To install the necessary packages, simply uncomment the second block containing the `!pip install ...` lines. You only need to do this once for NER and once for RE, per environment.
+5. Then, you may run all of the code blocks. The hyperparameter optimization and training may take a few minutes to a couple of hours depending on your GPU size.
+
+## Application
+
+
+
 ## References
 
 [1] Abdelmageed, N., Löffler, F., Feddoul, L., Algergawy, A., Samuel, S., Gaikwad, J., ... & König-Ries, B. (2022). BiodivNERE: Gold standard corpora for named entity recognition and relation extraction in the biodiversity domain. Biodiversity Data Journal, 10.
