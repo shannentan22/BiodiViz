@@ -121,4 +121,5 @@ To run the application for other input texts, simply go back to the main page an
 ## References
 
 [1] Abdelmageed, N., Löffler, F., Feddoul, L., Algergawy, A., Samuel, S., Gaikwad, J., ... & König-Ries, B. (2022). BiodivNERE: Gold standard corpora for named entity recognition and relation extraction in the biodiversity domain. Biodiversity Data Journal, 10.
+
 [2] Posa, M. R. C., Diesmos, A. C., Sodhi, N. S., & Brooks, T. M. (2008). Hope for threatened tropical biodiversity: lessons from the Philippines. BioScience, 58(3), 231-240.
