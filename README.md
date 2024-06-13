@@ -31,13 +31,13 @@ The *App* folder contains the files for running the BiodiViz application. The fi
 
 If you wish to run the application, you must follow the proceeding steps. Note that the instructions are tailored to a Windows 10 operating system. Other operating systems should follow a similar process but may be slightly different.
 
-### 1. Cloning this Github repository
+### 1. Cloning this GitHub repository
 
-In downloading repositories from Github, there are multiple methods, all of which can be searched online. For this user manual, we shall explain the two methods that we believe are the simplest. Note that our instructions and descriptions are based on the current interface of Github as of June 14, 2024.
+In downloading repositories from GitHub, there are multiple methods, all of which can be searched online. For this user manual, we shall explain the two methods that we believe are the simplest. Note that our instructions and descriptions are based on the current interface of GitHub as of June 14, 2024.
 
 #### Method 1: Download as ZIP file
 
-1. Access the [BiodiViz Github repository](https://github.com/shannentan22/BiodiViz/).
+1. Access the [BiodiViz GitHub repository](https://github.com/shannentan22/BiodiViz/).
 2. Click on the `<>Code` button located above the repository files on the top-right.
 3. Click on the `Download ZIP` button at the bottom of the dropdown.
 4. Once downloaded, unzip the file.
@@ -54,7 +54,7 @@ You may delete the Finetuning and Datasets folders from the repository since the
 
 ### 2. Downloading the NER & RE Models
 
-Since the Named Entity Recognition (NER) and Relation Extraction (RE) Models are too big to be included in the Github repository, you may download them from the pre-release attachments instead: https://github.com/shannentan22/BiodiViz/releases/tag/v1.0.0.
+Since the Named Entity Recognition (NER) and Relation Extraction (RE) Models are too big to be included in the GitHub repository, you may download them from the pre-release attachments instead: https://github.com/shannentan22/BiodiViz/releases/tag/v1.0.0.
 The files are named `ner_model.zip` and `re_model.zip`.
 
 Before downloading, please ensure that you have enough space to accommodate the models since each file is fairly large at about 760+ MB. The download process may also take a few minutes due to the files' sizes. After downloading the files, unzip them, and move the unzipped folders under the App folder of the cloned repository. 
