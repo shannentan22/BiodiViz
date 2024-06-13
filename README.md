@@ -84,15 +84,41 @@ Every time you wish to run the application, the following set of steps must be d
 
 ### 5. Using the Application
 
-1. Once you have access to the main page of BiodiViz in your browser, you may input any biodiversity-related text into the text box. Note that longer inputs may also take longer to process. Click `Submit` to generate the knowledge graph.
-2. Once completed, you will be redirected to the graph page displaying the knowledge graph.
-3. At the top of the graph page, there are filtering options. Choose specific entity categories and relation types you would want to be included in the graph. After clicking \texttt{Apply filter}, the intersection of the entity categories and relation types will be displayed in a new knowledge graph.
-4. You can also zoom or pan the graph to navigate it better:
-    - Scroll up to zoom in.
-    - Scroll down to zoom out.
-    - Drag the graph to pan.
-5. To run the application for other input texts, simply go back to the main page and repeat the instructions from this section.
+#### a. Main Page
+
+Once you have access to the main page of BiodiViz in your browser, you may input any biodiversity-related text into the text box. Note that longer inputs may also take longer to process. Click `Submit` to generate the knowledge graph.
+
+*Figure 1: BiodiViz main page with sample input text from part of a biodiversity article by Posa et al. [2]*
+![Figure 1: BiodiViz main page with sample input text from part of a biodiversity article by Posa et al.](/README_files/userint1.png)
+
+#### b. Knowledge Graph
+
+Once completed, you will be redirected to the graph page displaying the knowledge graph.
+
+*Figure 2: BiodiViz graph page with knowledge graph generated from input text*
+![Figure 2: BiodiViz graph page with knowledge graph generated from input text](/README_files/userint2.png)
+
+#### c. Filtering Options
+
+At the top of the graph page, there are filtering options. Choose specific entity categories and relation types you would want to be included in the graph. After clicking `Apply filter`, the intersection of the entity categories and relation types will be displayed in a new knowledge graph.
+
+*Figure 3: BiodiViz filter selection interface*
+![Figure 3: BiodiViz filter selection interface](/README_files/userint3.png)
+
+*Figure 4: BiodiViz graph page with filtered knowledge graph*
+![Figure 4: BiodiViz graph page with filtered knowledge graph](/README_files/userint4.png)
+
+#### d. Graph Navigation
+
+You can also zoom or pan the graph to navigate it better:
+- Scroll up to zoom in.
+- Scroll down to zoom out.
+- Drag the graph to pan.
+
+#### e. Repeat
+To run the application for other input texts, simply go back to the main page and repeat the instructions from this section.
 
 ## References
 
 [1] Abdelmageed, N., Löffler, F., Feddoul, L., Algergawy, A., Samuel, S., Gaikwad, J., ... & König-Ries, B. (2022). BiodivNERE: Gold standard corpora for named entity recognition and relation extraction in the biodiversity domain. Biodiversity Data Journal, 10.
+[2] Posa, M. R. C., Diesmos, A. C., Sodhi, N. S., & Brooks, T. M. (2008). Hope for threatened tropical biodiversity: lessons from the Philippines. BioScience, 58(3), 231-240.
