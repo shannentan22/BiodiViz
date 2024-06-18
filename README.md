@@ -107,22 +107,27 @@ You may also input raw text to the right box.
 *Figure 3: BiodiViz main page with sample input text from part of a biodiversity article by Posa et al. [2]*
 ![Figure 3: BiodiViz main page with sample input text from part of a biodiversity article by Posa et al.](/README_files/userint3.png)
 
+Please note that longer inputs may also take longer to process. Click `Submit` to generate the knowledge graph.
+
 #### c. Knowledge Graph
 
 Once completed, you will be redirected to the graph page displaying the knowledge graph.
 
-*Figure 2: BiodiViz graph page with knowledge graph generated from input text*
-![Figure 2: BiodiViz graph page with knowledge graph generated from input text](/README_files/userint2.png)
+*Figure 4: BiodiViz graph page with knowledge graph generated from input text*
+![Figure 4: BiodiViz graph page with knowledge graph generated from input text](/README_files/userint4.png)
+
+*Figure 5: BiodiViz graph page with full view of knowledge graph*
+![Figure 5: BiodiViz graph page with full view of knowledge graph](/README_files/userint5.png)
 
 #### d. Filtering Options
 
-At the top of the graph page, there are filtering options. Choose specific entity categories and relation types you would want to be included in the graph. After clicking `Apply filter`, the intersection of the entity categories and relation types will be displayed in a new knowledge graph.
+At the bottom of the graph page, there are filtering options. Choose specific entity categories and relation types you would want to be included in the graph. After clicking `Apply filter`, the intersection of the entity categories and relation types will be displayed in a new knowledge graph.
 
-*Figure 3: BiodiViz filter selection interface*
-![Figure 3: BiodiViz filter selection interface](/README_files/userint3.png)
+*Figure 6: BiodiViz filter selection interface*
+![Figure 6: BiodiViz filter selection interface](/README_files/userint6.png)
 
-*Figure 4: BiodiViz graph page with filtered knowledge graph*
-![Figure 4: BiodiViz graph page with filtered knowledge graph](/README_files/userint4.png)
+*Figure 7: BiodiViz graph page with filtered knowledge graph*
+![Figure 7: BiodiViz graph page with filtered knowledge graph](/README_files/userint7.png)
 
 #### e. Graph Navigation
 
