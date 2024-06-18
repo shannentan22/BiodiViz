@@ -139,8 +139,33 @@ You can also zoom or pan the graph to navigate it better:
 #### f. Repeat
 To run the application for other input texts, simply go back to the main page and repeat the instructions from this section.
 
+## Third-Party Code Sources
+
+### User Interface
+
+The user interface for our application was largely based on a work by Danny Markov, available in a GitHub repository developed using Bootstrap Studio [3]. For the drag-and-drop file-upload design, we modified it from the user ramniwassharma's work on Bootsnipp [4]. This repository provided an HTML file for the basic HTML structure and a CSS file for styling.
+
+Using this codebase as a foundation, we added our own code to incorporate the specific functionality required for our application. This included customizing the UI to match our project's branding and enhancing interactivity.
+
+By building upon Danny Markov's Bootstrap Studio template, we accelerated the development process and ensured a professional, user-friendly interface from the start.
+
+### Knowledge Graph
+
+In the development of the knowledge graph for this project, a significant portion of the codebase was derived from Drew Fisher’s “Concept Map”, available as an Observable Notebook [5]. This foundational code provided a robust starting point, particularly in terms of the basic structural and visual design of the graph.
+
+To tailor the concept map to better suit the specific requirements of this project, several modifications were made. These included modifications to the code to make it compatible with Javascript. There were also slight adjustments to design features and properties, ensuring the visual representation fit the BiodiViz’s interface. Additionally, new functionalities were introduced to enhance user interaction with the graph. Notably, capabilities for graph panning and zooming were integrated, offering a more dynamic and user-friendly experience.
+
+By leveraging the existing work from Drew Fisher’s notebook and building upon it, the development process was significantly accelerated. This approach not only ensured a high-quality base for the knowledge graph but also allowed for the incorporation of advanced features that may have been more time-consuming to develop from scratch. This combination of existing code and custom enhancements facilitated the creation of a powerful and interactive knowledge graph tailored to the specific needs of this research.
+
 ## References
 
 [1] Abdelmageed, N., Löffler, F., Feddoul, L., Algergawy, A., Samuel, S., Gaikwad, J., ... & König-Ries, B. (2022). BiodivNERE: Gold standard corpora for named entity recognition and relation extraction in the biodiversity domain. Biodiversity Data Journal, 10.
 
 [2] Posa, M. R. C., Diesmos, A. C., Sodhi, N. S., & Brooks, T. M. (2008). Hope for threatened tropical biodiversity: lessons from the Philippines. BioScience, 58(3), 231-240.
+
+[3] D. Markov, “contact-form-bootstrap-snippet,” 2019. [Online]. Available: https://github.com/bootstrapstudio/contact-form-bootstrap-snippet
+
+[4] ramniwassharma, “Drag and drop input file in bootstrap,” accessed: 2024-06-18. [Online]. Available: https://bootsnipp.com/snippets/DOXy4
+
+[5] D. Fisher, “Concept map,” 2021. [Online]. Available: https://observablehq.com/@drewsapple/concept-map
+
