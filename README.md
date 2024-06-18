@@ -143,7 +143,7 @@ To run the application for other input texts, simply go back to the main page an
 
 ### User Interface
 
-The user interface for our application was largely based on a work by Danny Markov, available in a GitHub repository developed using Bootstrap Studio [3]. For the drag-and-drop file-upload design, we modified it from the user ramniwassharma's work on Bootsnipp [4]. This repository provided an HTML file for the basic HTML structure and a CSS file for styling.
+The user interface for our application was largely based on a work by Danny Markov, available in a GitHub repository developed using Bootstrap Studio [3]. This repository provided an HTML file for the basic HTML structure and a CSS file for styling. For the drag-and-drop file-upload design, we modified it from the user ramniwassharma's work on Bootsnipp [4].
 
 Using this codebase as a foundation, we added our own code to incorporate the specific functionality required for our application. This included customizing the UI to match our project's branding and enhancing interactivity.
 
