@@ -1,10 +1,18 @@
 from flask import Flask, render_template, request, jsonify
 from transformers import pipeline
 from itertools import combinations
-
+from werkzeug.utils import secure_filename
+import docx
+import PyPDF2
+import os
+import shutil
 import torch
 import nltk
 nltk.download('punkt')
+
+# File upload set-up
+UPLOAD_FOLDER = 'static/uploads/'
+ALLOWED_EXTENSIONS = {'txt', 'docx', 'pdf'}
 
 # Initialize the data dictionary
 data = {
@@ -13,6 +21,37 @@ data = {
 }
 
 app = Flask(__name__, static_url_path='/static')
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+# FUNCTIONS
+
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+def extract_text_from_file(file_path):
+    ext = os.path.splitext(file_path)[1].lower()
+    text = ''
+    
+    if ext == '.txt':
+        with open(file_path, 'r', encoding='utf-8') as f:
+            text = f.read()
+    elif ext == '.doc' or ext == '.docx':
+        doc = docx.Document(file_path)
+        text = '\n'.join([paragraph.text for paragraph in doc.paragraphs])
+    elif ext == '.pdf':
+        with open(file_path, 'rb') as f:
+            reader = PyPDF2.PdfReader(f)
+            text = '\n'.join([reader.pages[i].extract_text() for i in range(len(reader.pages))])
+    
+    return text
+
+def delete_uploads_folder():
+    if os.path.exists(app.config['UPLOAD_FOLDER']):
+        shutil.rmtree(app.config['UPLOAD_FOLDER'])
+    os.makedirs(app.config['UPLOAD_FOLDER'])
+
+# ROUTES
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -21,10 +60,24 @@ def index():
 @app.route('/graph', methods=['POST'])
 def upload():
     global data
+    delete_uploads_folder()
     if request.method == 'POST':
         button_type = request.form.get('button_type')
-        if button_type == 'initial':
-            paragraph = request.form.get('input')
+        if 'file' in request.files or button_type == 'initial':
+            if 'file' in request.files:
+                file = request.files['file']
+                if file and file.filename != '':
+                    filename = secure_filename(file.filename)
+                    file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+                    file.save(file_path)
+                    
+                    # Identify the file type
+                    file_ext = os.path.splitext(file.filename)[1].lower()
+
+                    if allowed_file(file_ext):
+                        paragraph = extract_text_from_file(file_path)
+            elif button_type == 'initial':
+                paragraph = request.form.get('input')
             
             # Clear the data dictionary
             data = {
@@ -107,6 +160,7 @@ def upload():
                 categories_string = "Organism, Environment, Quality, Location, Phenomena, Matter"
                 relations_string = "have, occur_in, influence, none"
             return render_template('/graph.html', data=data, categories=categories_string, relations=relations_string)
+        
         elif button_type == 'filter':
             categories = [request.form.get('Organism'), 
                           request.form.get('Environment'), 

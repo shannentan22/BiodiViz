@@ -9,84 +9,86 @@
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-  <div class="contact-clean">
-    <h2 class="text-center">BiodiViz</h2>
-    <div class="container">
-        <form action="/graph" method="POST">
-          <input type="hidden" name="button_type" value="filter">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="row">
-                <h4>Filter By Entity Category</h4>
-              </div>
-              <div class="row">
-                <input type="checkbox" id="Organism" name="Organism" value="Organism">
-                <img class="node" src="{{ url_for('static', filename='img/blue_node.png') }}">
-                <label for="Organism">organism</label>
-                <input type="checkbox" id="Environment" name="Environment" value="Environment">
-                <img class="node" src="{{ url_for('static', filename='img/green_node.png') }}">
-                <label for="Environment">environment</label>
-                <input type="checkbox" id="Quality" name="Quality" value="Quality">
-                <img class="node" src="{{ url_for('static', filename='img/purple_node.png') }}">
-                <label for="Quality">quality</label>
-              </div>
-              <div class="row">
-                <input type="checkbox" id="Location" name="Location" value="Location">
-                <img class="node" src="{{ url_for('static', filename='img/yellow_node.png') }}">
-                <label for="Location">location</label>
-                <input type="checkbox" id="Phenomena" name="Phenomena" value="Phenomena">
-                <img class="node" src="{{ url_for('static', filename='img/red_node.png') }}">
-                <label for="Phenomena">phenomena</label>
-                <input type="checkbox" id="Matter" name="Matter" value="Matter">
-                <img class="node" src="{{ url_for('static', filename='img/orange_node.png') }}">
-                <label for="Matter">matter</label>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="row">
-                <h4>Filter By Relation Type</h4>
-              </div>
-              <div class="row">
-                <input type="checkbox" id="have" name="have" value="have">
-                <img class="link" src="{{ url_for('static', filename='img/blue_link.png') }}">
-                <label for="have">have</label>
-                <input type="checkbox" id="occur_in" name="occur_in" value="occur_in">
-                <img class="link" src="{{ url_for('static', filename='img/red_link.png') }}">
-                <label for="occur_in">occur in</label>
-                <input type="checkbox" id="influence" name="influence" value="influence">
-                <img class="link" src="{{ url_for('static', filename='img/yellow_link.png') }}">
-                <label for="influence">influence</label>
-                <input type="checkbox" id="none" name="none" value="none">
-                <label for="none">none</label>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <p style="margin-left: -15px;"><b>Selected entity categories:</b> <i>{{ categories }}</i></p>
-            </div>
-            <div class="col-md-6">
-              <p style="margin-left: -15px;"><b>Selected relation types:</b> <i>{{ relations }}</i></p>
-            </div>
-          </div>
-          <div class="row d-flex justify-content-end">
-            <input type="submit" value="Apply filter" placeholder="Submit">
-          </div>
-        </form>
+  <nav class="navbar navbar-light bg-body-tertiary">
+    <div class="container d-flex justify-content-center">
+        <a class="navbar-brand" href="#">
+            <img src="{{ url_for('static', filename='img/logo.png') }}"
+                height="130"
+                alt="BiodiViz Logo"
+                loading="lazy" />
+        </a>
     </div>
-    <!-- Add filter here. Then use Flask to only send nodes that fit the filter. -->
-    <div class="contact-clean container">
+  </nav>
+  <div class="contact-clean">
+    <div class="container">
       <div class="row">
         <div class="chart" id="chart"></div>
       </div>
     </div>
   </div>
+  <div class="contact-clean">
+    <div class="container">
+      <form action="/graph" method="POST">
+        <input type="hidden" name="button_type" value="filter">
+        <div class="row">
+          <div class="col-md-6">
+            <h4>Filter By Entity Category</h4>
+            <input class="node-box" type="checkbox" id="Organism" name="Organism" value="Organism">
+            <img class="node" src="{{ url_for('static', filename='img/blue_node.png') }}">
+            <label class="node-label" for="Organism">organism</label>
+            <input class="node-box" type="checkbox" id="Environment" name="Environment" value="Environment">
+            <img class="node" src="{{ url_for('static', filename='img/green_node.png') }}">
+            <label class="node-label" for="Environment">environment</label>
+            <input class="node-box" type="checkbox" id="Quality" name="Quality" value="Quality">
+            <img class="node" src="{{ url_for('static', filename='img/purple_node.png') }}">
+            <label class="node-label" for="Quality">quality</label>
+            <br>
+            <input class="node-box" type="checkbox" id="Location" name="Location" value="Location">
+            <img class="node" src="{{ url_for('static', filename='img/yellow_node.png') }}">
+            <label class="node-label" for="Location">location</label>
+            <input class="node-box" type="checkbox" id="Phenomena" name="Phenomena" value="Phenomena">
+            <img class="node" src="{{ url_for('static', filename='img/red_node.png') }}">
+            <label class="node-label" for="Phenomena">phenomena</label>
+            <input class="node-box" type="checkbox" id="Matter" name="Matter" value="Matter">
+            <img class="node" src="{{ url_for('static', filename='img/orange_node.png') }}">
+            <label class="node-label" for="Matter">matter</label>
+          </div>
+          <div class="col-md-6">
+            <h4>Filter By Relation Type</h4>
+            <input class="link-box" type="checkbox" id="have" name="have" value="have">
+            <img class="link" src="{{ url_for('static', filename='img/blue_link.png') }}">
+            <label class="link-label" for="have">have</label>
+            <input class="link-box" type="checkbox" id="occur_in" name="occur_in" value="occur_in">
+            <img class="link" src="{{ url_for('static', filename='img/red_link.png') }}">
+            <label class="link-label" for="occur_in">occur in</label>
+            <input class="link-box" type="checkbox" id="influence" name="influence" value="influence">
+            <img class="link" src="{{ url_for('static', filename='img/yellow_link.png') }}">
+            <label class="link-label" for="influence">influence</label>
+            <input class="link-box" type="checkbox" id="none" name="none" value="none">
+            <label class="link-label" for="none">none</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <p><b>Selected entity categories:</b> <i>{{ categories }}</i></p>
+          </div>
+          <div class="col-md-6">
+            <p><b>Selected relation types:</b> <i>{{ relations }}</i></p>
+          </div>
+        </div>
+        <input class="btn btn-primary" type="submit" value="Apply filter" placeholder="Submit">
+      </form>
+    </div>
+  </div>
+
+  <footer class="navbar navbar-light bg-body-tertiary" style="background-color: #3F7941; height: 150px; border-radius: 1000px 1000px 0 0">
+  </footer>
 
   <script>
     var data = JSON.parse('{{ data | tojson }}');
     console.log(data);
   
-    function chart(data, width, height, bubbleSize, getColor, linkArc, lines, words, textRadius) { // invalidation
+    function chart(data, width, height, bubbleSize, getColor, linkArc, lines, words, textRadius) {
       // Create copies of the data to avoid modifying the original
       const links = data.links.map(d => Object.assign({}, d));
       const nodes = data.nodes.map(d => Object.assign({}, d));
@@ -99,7 +101,7 @@
         .force("y", d3.forceY());
   
       const svg = d3.create("svg")
-        .attr("viewBox", [-width / 2, -height / 2 -50, width, height + 50]) //! CAN USE THIS TO ADJUST GRAPH MARGINS
+        .attr("viewBox", [-width / 2, -height / 2 -50, width, height + 50])
         .attr("text-anchor", "middle")
         .call(d3.zoom().on("zoom", function (event) {
             svg.attr("transform", event.transform)
@@ -141,7 +143,6 @@
             return "black"; // Default color for other relations
           }
         })
-        // .attr("marker-end", d => `url(${new URL("#arrow", document.location)})`);
   
       const bubble = svg.append("g")
         .attr("stroke", "#fff")
@@ -286,5 +287,7 @@
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

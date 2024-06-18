@@ -1,5 +1,16 @@
+.navbar {
+    background-color: #3F7941;
+    border-radius: 0 0 1000px 1000px;
+}
+
+.footer {
+    background-color: #3F7941;
+    height: 150px;
+    border-radius: 1000px 1000px 0 0;
+}
+
 .contact-clean {
-    background:#f1f7fc;
+    background: #ffffff;
     padding-top: 30px;
     padding-right: 80px;
     padding-bottom: 80px;
@@ -32,6 +43,7 @@
     border-radius:4px;
     color:#505e6c;
     box-shadow:1px 1px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
 }
 
 @media (max-width:2000px) {
@@ -62,7 +74,7 @@
     outline:none;
     color:inherit;
     padding-left:12px;
-    height:500px;
+    height:400px;
 }
 
 .contact-clean form .form-control:focus {
@@ -89,6 +101,7 @@
     letter-spacing:0.4px;
     line-height:1;
     outline:none !important;
+    width: 100%;
 }
 
 .contact-clean form .btn:hover {
@@ -100,7 +113,7 @@
 }
 
 .contact-clean form .btn-primary {
-    background-color:#055ada !important;
+    background-color:#6aad6c !important;
     margin-top:15px;
     color:#fff;
 }
@@ -114,17 +127,35 @@
 .node {
     width: 18px;
     height: 18px;
-    margin-top: 9px;
+    margin-top: -10px;
     margin-left: 4px;
     margin-right: 2px;
+}
+
+.node-box {
+    height: 20px;
+    width: 20px;
+}
+
+.node-label {
+    margin-top: -10px;
 }
 
 .link {
     width: 18px;
     height: 5px;
-    margin-top: 16px;
+    margin-top: -10px;
     margin-left: 4px;
     margin-right: 2px;
+}
+
+.link-box {
+    height: 20px;
+    width: 20px;
+}
+
+.link-label {
+    vertical-align: center;
 }
 
 .border {
@@ -139,4 +170,50 @@
 }
 .d-block {
   display:block;
+}
+
+.files input {
+    outline: 2px dashed #92b0b3;
+    outline-offset: -10px;
+    -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    padding: 150px 0px 85px 28%;
+    text-align: center !important;
+    margin: 0;
+    width: 100% !important;
+}
+.files input:focus{     outline: 2px dashed #92b0b3;  outline-offset: -10px;
+    -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    transition: outline-offset .15s ease-in-out, background-color .15s linear; border:1px solid #92b0b3;
+ }
+.files{ position:relative}
+.files:after {  pointer-events: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 50px;
+    right: 0;
+    height: 56px;
+    content: "";
+    background-image: url(https://image.flaticon.com/icons/png/128/109/109612.png);
+    display: block;
+    margin: 0 auto;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.color input{ background-color:#f1f1f1;}
+.files:before {
+    position: absolute;
+    bottom: 150px;
+    left: 0;  pointer-events: none;
+    width: 100%;
+    right: 0;
+    height: 57px;
+    content: "or drag it here.";
+    display: block;
+    margin: 0 auto;
+    color: #3F7941;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
 }
