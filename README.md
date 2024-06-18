@@ -86,19 +86,35 @@ Every time you wish to run the application, the following set of steps must be d
 
 #### a. Main Page
 
-Once you have access to the main page of BiodiViz in your browser, you may input any biodiversity-related text into the text box. Note that longer inputs may also take longer to process. Click `Submit` to generate the knowledge graph.
+Once you have access to the main page of BiodiViz in your browser, the main page should initially look like this:
 
-*Figure 1: BiodiViz main page with sample input text from part of a biodiversity article by Posa et al. [2]*
-![Figure 1: BiodiViz main page with sample input text from part of a biodiversity article by Posa et al.](/README_files/userint1.png)
+*Figure 1: BiodiViz main page with no input yet [2]*
+![Figure 1: BiodiViz main page with no input yet](/README_files/userint1.png)
 
-#### b. Knowledge Graph
+#### b. Submitting Inputs
+
+You then have two ways to submit biodiversity-related inputs to the application:
+
+##### i. Via File-Upload
+You may upload a `.txt`, `.docx`, or `.pdf` file to the left box by choosing or dragging them from your file system. Please note that text from `.docx` or `.pdf` files might not be extracted as accurately. `.pdf` files also need to have a text layer to be read.
+
+*Figure 2: BiodiViz main page with sample input text from part of a biodiversity article by Posa et al. [2]*
+![Figure 2: BiodiViz main page with sample input text from part of a biodiversity article by Posa et al.](/README_files/userint2.png)
+
+##### ii. Via Raw Text
+You may also input raw text to the right box.
+
+*Figure 3: BiodiViz main page with sample input text from part of a biodiversity article by Posa et al. [2]*
+![Figure 3: BiodiViz main page with sample input text from part of a biodiversity article by Posa et al.](/README_files/userint3.png)
+
+#### c. Knowledge Graph
 
 Once completed, you will be redirected to the graph page displaying the knowledge graph.
 
 *Figure 2: BiodiViz graph page with knowledge graph generated from input text*
 ![Figure 2: BiodiViz graph page with knowledge graph generated from input text](/README_files/userint2.png)
 
-#### c. Filtering Options
+#### d. Filtering Options
 
 At the top of the graph page, there are filtering options. Choose specific entity categories and relation types you would want to be included in the graph. After clicking `Apply filter`, the intersection of the entity categories and relation types will be displayed in a new knowledge graph.
 
@@ -108,14 +124,14 @@ At the top of the graph page, there are filtering options. Choose specific entit
 *Figure 4: BiodiViz graph page with filtered knowledge graph*
 ![Figure 4: BiodiViz graph page with filtered knowledge graph](/README_files/userint4.png)
 
-#### d. Graph Navigation
+#### e. Graph Navigation
 
 You can also zoom or pan the graph to navigate it better:
 - Scroll up to zoom in.
 - Scroll down to zoom out.
 - Drag the graph to pan.
 
-#### e. Repeat
+#### f. Repeat
 To run the application for other input texts, simply go back to the main page and repeat the instructions from this section.
 
 ## References
