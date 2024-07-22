@@ -98,7 +98,7 @@ You then have two ways to submit biodiversity-related inputs to the application:
 ##### i. Via File-Upload
 You may upload a `.txt`, `.docx`, or `.pdf` file to the left box by choosing or dragging them from your file system. Please note that text from `.docx` or `.pdf` files might not be extracted as accurately. `.pdf` files also need to have a text layer to be read.
 
-*Figure 2: BiodiViz main page with sample input text from part of a biodiversity article by Posa et al. [2]*
+*Figure 2: BiodiViz main page with sample input file from part of a biodiversity article by Posa et al. [2]*
 ![Figure 2: BiodiViz main page with sample input text from part of a biodiversity article by Posa et al.](/README_files/userint2.png)
 
 ##### ii. Via Raw Text
